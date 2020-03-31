@@ -5,10 +5,12 @@ String name;
 static int uid=0;
  Scanner scan=new Scanner(System.in);
  Todo[] todo=new Todo[10];
+ Personaldetails pd;
  User(){
 	 uid++;
 	 System.out.println("Enter name");
 	 name=scan.nextLine();
+	 pd=new Personaldetails();
 	 System.out.println("Enter number of todos");
 	 n=scan.nextInt();
 	 for(i=0;i<n;i++) {
@@ -16,8 +18,9 @@ static int uid=0;
 	 }
  }
  void disp() {
-	 System.out.println("Name:"+name);
+	 System.out.println("Name:" + name);
 	 System.out.println("User id:"+uid);
+	 pd.print();
 	 for(i=0;i<n;i++) {
 		 todo[i].display();
 	 }
