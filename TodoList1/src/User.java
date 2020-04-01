@@ -2,9 +2,11 @@ import java.util.*;
 public class User {
 	int n,i,m;
 String name;
+String stodo;
 static int uid=0;
  Scanner scan=new Scanner(System.in);
  Todo[] todo=new Todo[10];
+ Todo t;
  Personaldetails pd;
  User(){
 	 uid++;
@@ -32,5 +34,14 @@ static int uid=0;
 		 todo[i]=new Todo();
 	 }
 	 n=m+n;
+ }
+ 
+ void searchuser() {
+	 System.out.println("Enter todo");
+		stodo=scan.nextLine();
+		stodo=scan.nextLine();
+	 for(i=0;i<n;i++) {
+		 todo[i].searchtodo(stodo);
+	 }
  }
 }

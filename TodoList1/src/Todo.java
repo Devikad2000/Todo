@@ -1,19 +1,39 @@
 import java.util.*;
 public class Todo {
-int id;
+int id=0;
 String description;
 String title;
+String word="shop";
+int i=0;
+int n=0;
 Scanner scan=new Scanner(System.in);
-ArrayList<String> arlist=new ArrayList<String>();   
+//ArrayList<String> arlist=new ArrayList<String>();   
+String a[]=new String[3];
+String todo;
 Todo(){
+	id++;
+	n++;
+	
+
 	System.out.println("Enter title");
 	title=scan.nextLine();
 	System.out.println("Enter description");
-    arlist.add(scan.nextLine()); 
+  //  arlist.add(scan.nextLine()); 
+    a[id-1]=scan.nextLine();
 }
 
 void display() {
-	System.out.println(arlist);
+	//System.out.println(arlist);  
+	if(i<n) {
+		System.out.println(a[i]);
+	}
+	i++;
+}
+
+void searchtodo(String x) {
+		if(x.contentEquals(a[i])) {
+			System.out.println(a[i]);
+	}
 }
 
 }
