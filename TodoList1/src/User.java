@@ -32,7 +32,7 @@ static int uid=0;
 	 m=scan.nextInt();
 	 for(i=n;i<n+m;i++) {
 		 todo[i]=new Todo();
-	 }
+	 } 
 	 n=m+n;
  }
  
