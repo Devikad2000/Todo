@@ -1,14 +1,19 @@
 import java.util.*;
 public class Personaldetails {
-double phno;
+String phno;
 String address;
 int age;
 Scanner scan=new Scanner(System.in);
-Personaldetails(){
+Personaldetails() throws InvalidLengthException {
 	System.out.println("Enter age");
 	age=scan.nextInt();
 	System.out.println("Enter phno");
-	phno=scan.nextDouble();
+	phno=scan.nextLine();
+	phno=scan.nextLine();
+	if(phno.length()>10 || phno.length()<10)
+		{
+		throw new InvalidLengthException();
+		}
 	System.out.println("Enter address");
 	address=scan.nextLine();
 	address=scan.nextLine();

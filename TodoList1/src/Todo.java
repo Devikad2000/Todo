@@ -16,8 +16,8 @@ Todo(){
 	n++;
 	
 
-	System.out.println("Enter title");
-	title=scan.nextLine();
+	//System.out.println("Enter title");
+	//title=scan.nextLine();
 	System.out.println("Enter description");
   //  arlist.add(scan.nextLine()); 
     a[id-1]=scan.nextLine();
@@ -39,11 +39,10 @@ void searchtodo(String x) {
 			if(t.contentEquals(yes)) {
 				a[i]=" ";
 			}
-			if(i<n) {
+			/* if(i<n) {
 				System.out.println(a[i]);
-			}
-			i++;
-	}
+			} */
+		}
 }
 
 }

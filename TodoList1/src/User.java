@@ -8,11 +8,18 @@ static int uid=0;
  Todo[] todo=new Todo[10];
  Todo t;
  Personaldetails pd;
- User(){
+ User() throws NoNumberException{
 	 uid++;
 	 System.out.println("Enter name");
 	 name=scan.nextLine();
+	 if(checkletter()==false) {
+		 throw new NoNumberException();
+	 }
+	 try {
 	 pd=new Personaldetails();
+	 }catch(InvalidLengthException e) {
+		 System.out.println(e);
+	 }
 	 System.out.println("Enter number of todos");
 	 n=scan.nextInt();
 	 for(i=0;i<n;i++) {
@@ -41,7 +48,17 @@ static int uid=0;
 		stodo=scan.nextLine();
 		stodo=scan.nextLine();
 	 for(i=0;i<n;i++) {
+		 System.out.println("1");
 		 todo[i].searchtodo(stodo);
 	 }
+ }
+ 
+ public boolean checkletter() {
+	 for(i=0;i<name.length();i++) {
+		 char ch=name.charAt(i);
+		 if((!(ch >= 'A' && ch <= 'Z')) && (!(ch >= 'a' && ch <= 'z')))
+			 return false;
+	 }
+	 return true;
  }
 }

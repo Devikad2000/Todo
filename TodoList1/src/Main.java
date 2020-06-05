@@ -1,5 +1,6 @@
 import java.util.*;
 import java.text.*;
+import java.sql.*;
 public class Main {
 	public static void main(String[] args) throws Exception {
 	int choice,n,j;
@@ -14,7 +15,11 @@ public class Main {
 		choice=scan.nextInt();
 		switch(choice) {
 		case 1:
+			try {
 			user[i]=new User();
+			}catch( NoNumberException ne) {
+				System.out.println(ne);
+			}
 			i++;
 			break;
 		case 2:
@@ -34,7 +39,7 @@ public class Main {
 			for(j=0;j<i;j++) {
 				if(sname.contentEquals(user[j].name)) {
 					user[j].insert();
-				}
+				} 
 			}
 			break;
 		case 4:
