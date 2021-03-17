@@ -19,6 +19,7 @@ static int uid=0;
 	 pd=new Personaldetails();
 	 }catch(InvalidLengthException e) {
 		 System.out.println(e);
+		 System.exit(0);
 	 }
 	 System.out.println("Enter number of todos");
 	 n=scan.nextInt();
